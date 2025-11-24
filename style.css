@@ -1,0 +1,352 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, lightgreen, yellow);
+  margin: 0;
+  padding: 0;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1, h2 {
+  text-align: center;
+  color: navy;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin-top: 30px;
+  animation: popIn 0.6s ease-out;
+  text-align: center;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: center;
+}
+
+td {
+  padding: 10px 0;
+  text-align: center;
+}
+
+label {
+  font-weight: 500;
+  color: dimgray;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: blue;
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.3);
+  transform: scale(1.02);
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: blue;
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.3);
+}
+
+
+input[type="submit"],
+button {
+  width: 100%;
+  background: linear-gradient(135deg, royalblue, deepskyblue);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+button, .DivinoCompute {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-form button,
+.login-form .DivinoCompute,
+.register-form button,
+.register-form .DivinoCompute {
+  width: 100%;
+  display: block;
+  margin: 15px auto 0 auto;
+  text-align: center;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background: linear-gradient(135deg, blue, dodgerblue);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 255, 0.3);
+}
+
+
+nav {
+  background: linear-gradient(135deg, darkblue, royalblue);
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+.result {
+  margin-top: 20px;
+  background: aliceblue;
+  padding: 15px;
+  border-radius: 10px;
+  color: darkblue;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+footer {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+}
+
+
+@media (max-width: 500px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+/* Login, Register, and Logout Page Styles */
+body.login-page,
+body.register-page,
+body.logout-page {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.login-container,
+.register-container,
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form,
+.register-form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-form form,
+.register-form form {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  box-shadow: none;
+  animation: none;
+}
+
+.login-form h1, .login-form h2,
+.register-form h1, .register-form h2 {
+  text-align: center;
+  margin: 10px 0;
+  margin-top: 0;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.success-message {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.logout-message {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.logout-message h1, .logout-message h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.logout-message p {
+  text-align: center;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid royalblue;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+a {
+  text-align: center;
+}
+
+.login-form a,
+.register-form a,
+.logout-message a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: blue;
+}
+
+.login-form a:hover,
+.register-form a:hover {
+  text-decoration: underline;
+}
+
